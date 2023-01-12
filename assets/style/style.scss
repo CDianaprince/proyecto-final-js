@@ -4,10 +4,11 @@
   line-height: 24px;
   font-weight: 400;
 
-  --Light-Grayish-Blue: hsl(234, 14%, 74%)
-  --Grayish-Blue: hsl(233, 13%, 49%)
-  --Dark-Grayish-Blue: hsl(232, 13%, 33%)
-  --Very-Light-Grayish-Blue: hsl(240, 78%, 98%)
+  --Light-Grayish-Blue: hsl(234, 14%, 74%);
+  --Grayish-Blue: hsl(233, 13%, 49%);
+  --Dark-Grayish-Blue: hsl(232, 13%, 33%);
+  --Very-Light-Grayish-Blue: hsl(240, 78%, 98%);
+  --Linear-Gradient: hsl(236, 72%, 79%) to hsl(237, 63%, 64%);
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
@@ -16,8 +17,18 @@
   -webkit-text-size-adjust: 100%;
 }
 
+.span-price{
+  font-size: 60px;
+  font-weight: 700;
+}
+
+.p-price{
+  font-size: 30px;
+  font-weight: 700;
+}
+
 a {
-  color: black;
+  color: rgb(57, 55, 55);
   text-decoration: none;
 }
 
@@ -27,41 +38,155 @@ body {
   place-items: center;
   min-width: 320px;
   min-height: 100vh;
+  background-color: var(--Very-Light-Grayish-Blue);
 }
 
 h1 {
   font-size: 3.2em;
   line-height: 1.1;
 }
-
+.h1, .spam-1 {
+  color: var(--Dark-Grayish-Blue);
+}
 #container-p {
   max-width: 1280px;
   margin: 0 auto;
   padding: 2rem;
   text-align: center;
 }
+  .spam-2 {
+  appearance: none;
+  background: linear-gradient(to right, hsl(236, 72%, 79%), hsl(237, 63%, 64%));
+  border-radius: 15px;
+  outline: #f9f9f9;
+  }
 
-.card {
-  padding: 2em;
-}
-
-
-button {
+  .btn-card {
+  width: 30vh;
+  margin-top: 1rem;
   border-radius: 8px;
   border: 1px solid transparent;
   padding: 0.6em 1.2em;
   font-size: 1em;
   font-weight: 500;
   font-family: inherit;
-  background-color: #1a1a1a;
+  background: linear-gradient(to right, hsl(236, 72%, 79%), hsl(237, 63%, 64%));
   cursor: pointer;
   transition: border-color 0.25s;
+  color: white;
+  font-size: smaller;
+  
 }
-button:hover {
-  border-color: #646cff;
+
+.header{
+  position: relative;
+  padding-bottom: 3rem;
+  .img{
+    position: absolute;
+    top: -7rem;
+    left: 10rem;
+  }
+  .tittle{
+    .div-input{
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      .switch {
+      height: 80px;
+      cursor: pointer;
+      border-radius: 0.8rem;
+      padding: 0 1.5rem;
+      display: flex;
+      align-items: center;
+
+      .input{
+        display: none;
+      }
+      .rail{
+        position: relative;
+        width: 90px;
+        height: 30px;
+        background: linear-gradient(to right, hsl(236, 72%, 79%), hsl(237, 63%, 64%));
+        border-radius: 3rem;
+        .circle{
+          display: block;
+          width: 36px;
+          height: 36px;
+          background-color: white;
+          border-radius: 50%;
+          position: absolute;
+          top: 50%;
+          transform: translateY(-50%);
+          left: 0;
+          transition: transform 0.4s;
+        }
+        }
+      }
+    }
+    }
+  
+  }
+  
+
+.div-input .switch .input:checked ~ .rail .circle{
+  transform: translate(55px, -50%);
+}
+
+.main{
+  .section1{
+    .div1-sec1{
+      border: solid;
+      border-color: white;
+      border-radius: 10px;
+      padding: 2rem;
+      position: relative;
+      background-color: white;
+      margin-bottom: 2rem;
+    }
+    .purple{
+      background: linear-gradient(to right, hsl(236, 72%, 79%), hsl(237, 63%, 64%));
+      color: white;
+
+
+      .btn-card--purple {
+      background-color: white;
+      width: 30vh;
+      margin-top: 1rem;
+      border-radius: 8px;
+      border: 1px solid transparent;
+      padding: 0.6em 1.2em;
+      font-size: 1em;
+      font-weight: 500;
+      font-family: inherit;
+      cursor: pointer;
+      transition: border-color 0.25s;
+      font-size: smaller;
+      .text-p{
+        background: -webkit-linear-gradient(hsl(237, 63%, 64%), hsl(236, 72%, 79%),);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+      }
+      }
+      
+    }
+  }
+}
+
+
+button:hover 
+{
+  border-color: var(--Dark-Grayish-Blue);
+}
+.btn-card--purple:hover {
+  border-color: var(--Grayish-Blue);
 }
 button:focus,
 button:focus-visible {
+  outline: 4px auto -webkit-focus-ring-color;
+}
+
+.btn-card--purple:focus,
+.btn-card--purple:focus-visible {
   outline: 4px auto -webkit-focus-ring-color;
 }
 
