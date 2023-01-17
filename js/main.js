@@ -1,23 +1,24 @@
 import '../assets/style/style.scss';
 import javascriptLogo from '../assets/logos/JavaScript.svg';
-import { setupCounter } from './module/counter.js';
 
-document.querySelector('#app').innerHTML = `
-  <div>
-    <a href="https://vitejs.dev" target="_blank">
-      <img src="/vite.svg" class="logo" alt="Vite logo" />
-    </a>
-    <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript" target="_blank">
-      <img src="${javascriptLogo}" class="logo vanilla" alt="JavaScript logo" />
-    </a>
-    <h1>Hello Vite!</h1>
-    <div class="card">
-      <button id="counter" type="button"></button>
-    </div>
-    <p class="read-the-docs">
-      Click on the Vite logo to learn more
-    </p>
-  </div>
-`
 
-setupCounter(document.querySelector('#counter'))
+
+let checkBox = document.querySelector('.toggle-checkbox');
+let price = document.querySelectorAll('.span-price');
+
+
+let toggle = (e) =>{
+  //if checked, show monthly prices
+  if(e.target.checked) {
+    price[0].textContent = "19.99";
+    price[1].textContent = "24.99";
+    price[2].textContent = "39.99";
+  }
+  else{
+    price[0].textContent = "199.99";
+    price[1].textContent = "244.99";
+    price[2].textContent = "399.99";
+  }
+};
+
+checkBox.onchange = toggle;

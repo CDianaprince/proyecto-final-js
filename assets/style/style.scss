@@ -44,9 +44,10 @@ body {
 h1 {
   font-size: 3.2em;
   line-height: 1.1;
-}
-.h1, .spam-1 {
   color: var(--Dark-Grayish-Blue);
+} .spam-1 {
+  color: var(--Dark-Grayish-Blue);
+  cursor: pointer;
 }
 #container-p {
   max-width: 1280px;
@@ -54,12 +55,7 @@ h1 {
   padding: 2rem;
   text-align: center;
 }
-  .spam-2 {
-  appearance: none;
-  background: linear-gradient(to right, hsl(236, 72%, 79%), hsl(237, 63%, 64%));
-  border-radius: 15px;
-  outline: #f9f9f9;
-  }
+  
 
   .btn-card {
   width: 30vh;
@@ -77,15 +73,23 @@ h1 {
   font-size: smaller;
   
 }
+.img{
+  position: absolute;
+  top: -1rem;
+  left: 71rem;
+}
+
+.imgb{
+  position: absolute;
+  top: 40rem;
+  right: 70rem;
+
+}
 
 .header{
   position: relative;
   padding-bottom: 3rem;
-  .img{
-    position: absolute;
-    top: -7rem;
-    left: 10rem;
-  }
+  flex-wrap: wrap;
   .tittle{
     .div-input{
       display: flex;
@@ -134,11 +138,17 @@ h1 {
 
 .main{
   .section1{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    position: relative;
+    z-index: 1;
+    flex-wrap: wrap;
     .div1-sec1{
       border: solid;
       border-color: white;
       border-radius: 10px;
-      padding: 2rem;
+      padding: 5rem;
       position: relative;
       background-color: white;
       margin-bottom: 2rem;
@@ -146,7 +156,10 @@ h1 {
     .purple{
       background: linear-gradient(to right, hsl(236, 72%, 79%), hsl(237, 63%, 64%));
       color: white;
-
+      margin-top: -1rem !important; 
+      margin-bottom: 1rem !important; 
+      font-size: larger;
+      line-height: 2rem;
 
       .btn-card--purple {
       background-color: white;
@@ -167,7 +180,6 @@ h1 {
         -webkit-text-fill-color: transparent;
       }
       }
-      
     }
   }
 }
@@ -190,15 +202,28 @@ button:focus-visible {
   outline: 4px auto -webkit-focus-ring-color;
 }
 
-@media (prefers-color-scheme: light) {
-  :root {
-    color: #213547;
-    background-color: #ffffff;
+@media screen and (max-width: 374px) {
+
+  .main{
+    .section1{
+      display: flex;
+      flex-direction: column;
+      flex-wrap: wrap;
+      justify-content: center;
+      .div1-sec1{
+        border: solid;
+        border-color: white;
+        border-radius: 10px;
+        padding: 2rem;
+        position: relative;
+        background-color: white;
+        margin-bottom: 2rem;
+      }
+    }
   }
-  a:hover {
-    color: #747bff;
+  .imgb {
+    display: none;
   }
-  button {
-    background-color: #f9f9f9;
-  }
+  .img {display: none;}
+  
 }

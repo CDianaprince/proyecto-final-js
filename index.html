@@ -8,28 +8,29 @@
   </head>
   <body>
     <div id="container-p">
+      <img class = "img" src="./assets/img/bg-top.svg">
       <header class= "header" id="header">
-        <img class = "img" src="./assets/img/bg-top.svg">
+        
         <div class= "tittle" id="tittle">
           <h1 class= "h1" id="h1-tittle">
             Our Pricing
           </h1>
           <div class="div-input">
-            <span class="spam-1">Annually</span>
+            <span class="list spam-1 activo" id="checkA" data-filter="year" >Annually</span>
             <label class="switch">
-              <input class="input" id="check" type="checkbox">
+              <input class="input toggle-checkbox" id="toggle" type="checkbox">
               <div class="rail">
-                <span class="circle"></span>
+                <span id="circle"  class="circle"></span>
               </div>
               
             </label>
-            <span class="spam-1">Montly</span>
+            <span class="list spam-1" id="checkM" data-filter="month">Monthly</span>
           </div>
         </div>
       </header>
       <main class="main"  id="main">
         <section  class="section1" id="section1">
-          <div  class="div1-sec1" id ="div1-sec1 Montly">
+          <div  class="price-monthly div1-sec1" id ="div1-sec1 Montly">
             <h2>Basic</h2>
             <p class="p-price">$<span class="span-price">19.99</span></p><hr>
             <p>500 GB Storage</p><hr>
@@ -38,7 +39,7 @@
 
             <button class="btn-card">LEARN MORE</button>
           </div>
-          <div  class="div1-sec1 purple" id ="div1-sec1 Montly">
+          <div  class="price-monthly div1-sec1 purple" id ="div1-sec1 Montly">
             <h2>Professional</h2>
             <p class="p-price">$<span class="span-price">24.99</span></p><hr>
             <p>500 GB Storage</p><hr>
@@ -47,7 +48,7 @@
 
             <button class="btn-card--purple"><span class="text-p">LEARN MORE</span></button>
           </div>
-          <div  class="div1-sec1" id ="div1-sec1 Montly">
+          <div  class="price-monthly div1-sec1" id ="div1-sec1 Montly">
             <h2>Master</h2>
             <p class="p-price">$<span class="span-price">39.99</span></p><hr>
             <p>500 GB Storage</p><hr>
@@ -56,44 +57,10 @@
 
             <button class="btn-card">LEARN MORE</button>
           </div>
-          <div  class="div1-sec1" id ="div1-sec1 Annually">
-            <h2>Basic</h2>
-            <p class="p-price">$<span class="span-price">199.99</span></p><hr>
-            <p>500 GB Storage</p><hr>
-            <p>2 User Allowed</p><hr>
-            <p>Send up to 3GB</p><hr>
-
-            <button class="btn-card">LEARN MORE</button>
-          </div>
-          <div  class="div1-sec1 purple" id ="div1-sec1 Annually">
-            <h2>Professional</h2>
-            <p class="p-price">$<span class="span-price">249.99</span></p><hr>
-            <p>500 GB Storage</p><hr>
-            <p>2 User Allowed</p><hr>
-            <p>Send up to 3GB</p><hr>
-
-            <button class="btn-card--purple"><span class="text-p">LEARN MORE</span></button>
-          </div>
-          <div  class="div1-sec1" id ="div1-sec1 Annually">
-            <h2>Master</h2>
-            <p class="p-price">$<span class="span-price">399.99</span></p><hr>
-            <p>500 GB Storage</p><hr>
-            <p>2 User Allowed</p><hr>
-            <p>Send up to 3GB</p><hr>
-
-            <button class="btn-card">LEARN MORE</button>
-          </div>
-
-          <div id ="div2-sec1">
-          </div>
-          <div id ="div3-sec1">
-          </div>
         </section>
       </main>
 
-      <footer id="footer">
-        <div id="footer-div1"></div>
-      </footer>
+      <img class= "imgb" src="./assets/img/bg-bottom.svg">
     </div>
     
     <script type="module" src="/js/main.js"></script>
