@@ -1,2 +1,2 @@
 # Vmy-templateDp
-proyecto con plantilla para trabajar projectos con variable de JS
+proyecto con plantilla para trabajar proyectos con variable de JS
